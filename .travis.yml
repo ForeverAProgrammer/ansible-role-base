@@ -1,4 +1,5 @@
 language: java
+sudo: required
 install:
  - ./install_ansible_container.sh
 script:
