@@ -1,0 +1,13 @@
+version: "2"
+settings:
+  conductor_base: ubuntu:trusty
+services:
+  web:
+    from: "ubuntu:trusty"
+    roles:
+      - base
+    ports:
+      - "80:80"
+    dev_overrides:
+      environment:
+        - "DEBUG=1"

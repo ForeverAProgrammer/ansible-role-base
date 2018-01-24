@@ -1,0 +1,5 @@
+language: java
+install:
+ - ./install_ansible_container.sh
+script:
+ - ansible-container build

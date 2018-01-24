@@ -1,0 +1,14 @@
+# This is a sample build configuration for Other.
+# Check our guides at https://confluence.atlassian.com/x/5Q4SMw for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: ubuntu:trusty
+
+pipelines:
+  default:
+    - step:
+        script:
+          - echo "Installing ansible container"
+          - chmod +x install_ansible_container.sh
+          - ./install_ansible_container.sh

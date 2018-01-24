@@ -1,0 +1,13 @@
+- name: install python 2
+  raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
+
+- name: "{{ task_prefix }} ensure aptitude is installed"
+  apt:
+    name: aptitude
+    state: latest
+
+- name: "{{ task_prefix }} update package manager and upgrade"
+  package:
+    update_cache: yes
+    upgrade: full
+    force: yes
